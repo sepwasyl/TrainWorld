@@ -9,6 +9,6 @@ public abstract class DieselLocomotive extends Locomotive{
     private String engineModel;
     @NotNull
     @Getter
-    private int maxPullCapacity;
+    private Integer maxPullCapacity;
 
 }

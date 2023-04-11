@@ -12,10 +12,11 @@ public class FoodTrainCar extends TrainCar {
 
     @NotNull
     @Getter
-    private int numberOfSeats;
+    private final Integer numberOfSeats;
 
 
-    protected FoodTrainCar(@NotNull Boolean electrified, @Nullable Float voltage) {
+    protected FoodTrainCar(@NotNull Boolean electrified, @Nullable Float voltage, @NotNull Integer numberOfSeats) {
         super(electrified, voltage);
+        this.numberOfSeats = numberOfSeats;
     }
 }

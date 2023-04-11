@@ -8,12 +8,14 @@ public class FreightTrainCar extends TrainCar{
 
     @Getter
     @NotNull
-    private float maxVolume;
+    private final Float maxVolume;
     @NotNull
     @Getter
-    private float maxLoadCapacity; //chodzi o kilogramy/tony
+    private final Float maxLoadCapacity;
 
-    protected FreightTrainCar(@NotNull Boolean electrified, @Nullable Float voltage) {
+    protected FreightTrainCar(@NotNull Boolean electrified, @Nullable Float voltage, @NotNull Float maxVolume, @NotNull Float maxLoadCapacity) {
         super(electrified, voltage);
+        this.maxVolume = maxVolume;
+        this.maxLoadCapacity = maxLoadCapacity;
     }
 }

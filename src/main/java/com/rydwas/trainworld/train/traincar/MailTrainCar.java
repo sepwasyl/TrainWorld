@@ -8,13 +8,15 @@ public class MailTrainCar extends TrainCar {
 
     @Getter
     @NotNull
-    private int maxVolume;
+    private final Integer maxVolume;
 
     @Getter
     @NotNull
-    private int maxWeight;
+    private final Integer maxWeight;
 
-    protected MailTrainCar(@NotNull Boolean electrified, @Nullable Float voltage) {
+    protected MailTrainCar(@NotNull Boolean electrified, @Nullable Float voltage, @NotNull Integer maxVolume, @NotNull Integer maxWeight) {
         super(electrified, voltage);
+        this.maxVolume = maxVolume;
+        this.maxWeight = maxWeight;
     }
 }

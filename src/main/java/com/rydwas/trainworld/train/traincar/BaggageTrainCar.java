@@ -7,13 +7,15 @@ import org.jetbrains.annotations.Nullable;
 public class BaggageTrainCar extends TrainCar {
     @Getter
     @NotNull
-    private int maxVolume;
+    private final Integer maxVolume;
 
     @Getter
     @NotNull
-    private int maxWeight;
+    private final Integer maxWeight;
 
-    protected BaggageTrainCar(@NotNull Boolean electrified, @Nullable Float voltage) {
+    protected BaggageTrainCar(@NotNull Boolean electrified, @Nullable Float voltage, @NotNull Integer maxVolume, @NotNull Integer maxWeight) {
         super(electrified, voltage);
+        this.maxVolume = maxVolume;
+        this.maxWeight = getMaxWeight();
     }
 }

@@ -3,20 +3,20 @@ package com.rydwas.trainworld.train.locmotive;
 import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
 
-public class ElectricLocomotive extends Locomotive {
+public abstract class ElectricLocomotive extends Locomotive {
 
     @Getter
     @NotNull
     private String engineModel;
     @Getter
     @NotNull
-    private boolean pantographed;
+    private Boolean pantographed;
 
     @Getter
     @NotNull
-    private int maxPullCapacity;
+    private Integer maxPullCapacity;
 
     @Getter
     @NotNull
-    private int voltage;
+    private Float voltage;
 }

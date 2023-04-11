@@ -8,10 +8,11 @@ public class SleepTrainCar extends TrainCar {
 
     @Getter
     @NotNull
-    private int numberOfBeds;
+    private final Integer numberOfBeds;
 
 
-    protected SleepTrainCar(@NotNull Boolean electrified, @Nullable Float voltage) {
+    protected SleepTrainCar(@NotNull Boolean electrified, @Nullable Float voltage, @NotNull Integer numberOfBeds ) {
         super(electrified, voltage);
+        this.numberOfBeds = numberOfBeds;
     }
 }
